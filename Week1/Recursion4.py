@@ -3,7 +3,7 @@ def count_users(group):
   for member in get_members(group):
     count += 1
     if is_group(member):
-      count += count_users(member)
+      count += count_users(member)-1
   return count
 
 print(count_users("sales")) # Should be 3
